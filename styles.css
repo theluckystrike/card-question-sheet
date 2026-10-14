@@ -1,0 +1,18 @@
+.cqs-preview .cqs-cards {
+	max-height: 35vh;
+	overflow-y: auto;
+	}
+
+.cqs-preview .setting-item-name, .cqs-preview .setting-item-description, .cqs-unsupported {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	}
+
+.cqs-error, .cqs-unsupported {
+	color: var(--text-error);
+	}
+
+.cqs-preview .cqs-page-settings {
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 8px;
+	}
