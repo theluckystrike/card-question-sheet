@@ -6,6 +6,8 @@ import { parseCards, outputPath, inFolder, type Card, type Parsed } from './card
 import { makePdf, DEFAULT_PAGE, pageSettings, type PageSettings } from './pdf';
 import { PreviewModal, FolderModal } from './preview';
 import { CardQuestionSheetSettingTab } from './settings';
+import { setupHello } from './hello/index';
+import WHATS_NEW from './whats-new.json';
 export interface SavedSettings { presets: { name: string; page: PageSettings }[] }
 export default class CardQuestionSheetPlugin extends Plugin {
  settings: SavedSettings = { presets: [] };
@@ -13,6 +15,8 @@ export default class CardQuestionSheetPlugin extends Plugin {
  preview: PreviewModal | null = null;
  private saving = false;
  async onload(): Promise<void> {
+   // First: "What's new" reads its state before the settings load (packages/hello). It does not wait.
+   setupHello(this, WHATS_NEW);
   const saved = await this.loadData() as Partial<SavedSettings> | null;
   this.settings = { presets: Array.isArray(saved?.presets) ? saved.presets.filter((p) => p && typeof p.name === 'string').map((p) => ({ name: p.name, page: pageSettings(p.page) })) : [] };
   const pro = createGitHubSponsors(this.app, this.manifest.id, SPONSORS, this);

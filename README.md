@@ -64,6 +64,8 @@ For `Cards.md`, the first output is `Cards questions.pdf` in the same folder. A 
 
 ## Settings
 
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
+
 The free layout uses 48 point margins, 12 point text and 48 points of answer space. It has one paper size, A4. The plugin settings tab contains the GitHub Sponsors controls. Pro page controls are in the preview. Named settings are stored in the plugin data for this vault. Card selections are temporary and are not stored when the preview closes.
 
 ## FAQ
