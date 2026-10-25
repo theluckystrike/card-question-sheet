@@ -1,5 +1,6 @@
 {
 	"name": "card-question-sheet",
+	"repository": {"type": "git", "url": "theluckystrike/card-question-sheet.git"},
 	"version": "1.1.0",
 	"private": true,
 	"description": "Export text study cards as a PDF question sheet with a separate answer key.",
