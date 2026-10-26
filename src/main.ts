@@ -1,7 +1,7 @@
 import { MarkdownView, Notice, Plugin, TFolder, normalizePath, getAllTags, type TFile } from 'obsidian';
 import type { SponsorsManager } from './license/index';
 import { createGitHubSponsors } from './license/github-obsidian';
-import { SPONSORS, bindPro, isPro, resetPro, proLabel } from './pro';
+import { SPONSORS, bindPro, isPro, resetPro, proLabel, proNotice } from './pro';
 import { parseCards, outputPath, inFolder, type Card, type Parsed } from './cards';
 import { makePdf, DEFAULT_PAGE, pageSettings, type PageSettings } from './pdf';
 import { PreviewModal, FolderModal } from './preview';
@@ -29,7 +29,7 @@ export default class CardQuestionSheetPlugin extends Plugin {
   this.app.workspace.onLayoutReady(() => { void pro.refresh(); this.registerInterval(window.setInterval(() => void pro.refresh(), 6 * 60 * 60 * 1000)); });
  }
  onunload(): void { this.preview?.close(); resetPro(); }
- requirePro(): boolean { if (isPro()) return true; new Notice('This feature needs pro. Sponsor on GitHub, then sign in from the plugin settings.'); return false; }
+ requirePro(): boolean { if (isPro()) return true; proNotice('This feature needs pro.'); return false; }
  openCurrent(): void {
   const view = this.app.workspace.getActiveViewOfType(MarkdownView);
   if (!view?.file) { new Notice('Open a Markdown note first.'); return; }

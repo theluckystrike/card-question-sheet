@@ -1,9 +1,9 @@
 {
 	"id": "card-question-sheet",
 	"name": "Card Question Sheet",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"changes": [
-		"New Send feedback command. It opens a page where you can report a problem or suggest an idea."
+		"The Card Question Sheet notice for a Pro feature now has a Sponsor on GitHub button."
 	],
 	"tip": "Write cat:::chat on one line to get two cards: cat with the answer chat, and chat with the answer cat.",
 	"thanks": "Hi, I am Michael, a solo developer in Poland. Card Question Sheet is one of over 100 small plugins that I make. Thank you for using it to print your study cards.",
