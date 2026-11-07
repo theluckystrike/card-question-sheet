@@ -1,8 +1,9 @@
 {
 	"id": "card-question-sheet",
 	"name": "Card Question Sheet",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"changes": [
+		"The Pro notice of Card Question Sheet now says that one payment turns on Pro in every NoteMods plugin.",
 		"The Card Question Sheet notice for a Pro feature now has a Sponsor on GitHub button."
 	],
 	"tip": "Write cat:::chat on one line to get two cards: cat with the answer chat, and chat with the answer cat.",
